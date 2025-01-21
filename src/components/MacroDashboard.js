@@ -12,9 +12,16 @@ const MacroDashboard = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [estimatedInflation, setEstimatedInflation] = useState(2.5);
-  const [estimatedGrowth, setEstimatedGrowth] = useState(1.0);
+  const [estimatedGrowth, setEstimatedGrowth] = useState(1.5);
 
   useEffect(() => {
+    // Validate backend URL is configured
+    if (!BACKEND_URL) {
+        setError('Backend URL not configured');
+        setLoading(false);
+        return;
+    }
+
     const fetchData = async () => {
       try {
         setLoading(true);
