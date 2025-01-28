@@ -145,13 +145,13 @@ const MacroDashboard = () => {
                 </p>
               </div>
               <div className="p-4 bg-white rounded shadow-sm">
-                <p className="text-gray-600">Horizon Premium (20yr TIPS yield)</p>
+                <p className="text-gray-600">Horizon Premium (20yr TIPS Yield)</p>
                 <p className="text-xl font-bold text-blue-600">
                   {data.longTermRates?.tips_yield ? `${data.longTermRates.tips_yield.toFixed(2)}%` : 'N/A'}
                 </p>
               </div>
               <div className="p-4 bg-white rounded shadow-sm">
-                <p className="text-gray-600">Market Implied Inflation</p>
+                <p className="text-gray-600">Market Implied Inflation (=20-year Bond Yield - 20-year TIPS Yield)</p>
                 <p className="text-xl font-bold text-blue-600">
                   {marketInflation !== null ? `${marketInflation}%` : 'N/A'}
                 </p>
