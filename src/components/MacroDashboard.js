@@ -151,6 +151,18 @@ const MacroDashboard = () => {
                 </p>
               </div>
               <div className="p-4 bg-white rounded shadow-sm">
+                <p className="text-gray-600">Market Implied Inflation</p>
+                <p className="text-xl font-bold text-blue-600">
+                  {marketInflation !== null ? `${marketInflation}%` : 'N/A'}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gray-50 p-4 rounded-lg shadow">
+            <h2 className="text-xl font-semibold mb-4">Long-term Parameters</h2>
+            <div className="space-y-4">
+              <div className="p-4 bg-white rounded shadow-sm">
                 <label className="block text-gray-600">
                   20yr Real GDP Growth Estimate
                   <input
